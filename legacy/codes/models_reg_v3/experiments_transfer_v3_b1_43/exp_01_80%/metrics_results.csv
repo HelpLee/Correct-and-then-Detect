@@ -1,0 +1,7 @@
+Dataset,Option,MSE,R2,input_dim,hidden_dim,output_dim,train_data,val_data,test_data,freeze_layers,num_layers,dropout,batch_size,learning_rate,epochs,timestamp_col,patience,n_past,n_future,optimizer,loss_function,device
+Train,Option 1,0.19075827868779033,0.94384763686967,18,64,10,12480,1560,1560,"[0, 1]",3,0.2,64,0.0001,500,timestamp,10,30,10,Adam,MSELoss,cpu
+Train,Option 2,0.2955520749092102,0.9122352004051208,18,64,10,12480,1560,1560,"[0, 1]",3,0.2,64,0.0001,500,timestamp,10,30,10,Adam,MSELoss,cpu
+Validation,Option 1,0.1836157487939947,0.8957663830074517,18,64,10,12480,1560,1560,"[0, 1]",3,0.2,64,0.0001,500,timestamp,10,30,10,Adam,MSELoss,cpu
+Validation,Option 2,0.2738587558269501,0.8423328995704651,18,64,10,12480,1560,1560,"[0, 1]",3,0.2,64,0.0001,500,timestamp,10,30,10,Adam,MSELoss,cpu
+Test,Option 1,0.17652239379532506,0.900310173323542,18,64,10,12480,1560,1560,"[0, 1]",3,0.2,64,0.0001,500,timestamp,10,30,10,Adam,MSELoss,cpu
+Test,Option 2,0.2664215862751007,0.8486956357955933,18,64,10,12480,1560,1560,"[0, 1]",3,0.2,64,0.0001,500,timestamp,10,30,10,Adam,MSELoss,cpu

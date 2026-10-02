@@ -1,0 +1,7 @@
+Dataset,Option,MSE,R2,input_dim,hidden_dim,output_dim,num_layers,dropout,batch_size,learning_rate,epochs,timestamp_col,patience,n_past,n_future,optimizer,loss_function,device
+Train,Option 1,0.3001909552048989,0.9275986306570532,18,64,10,3,0.2,64,0.005,100,timestamp,10,30,10,Adam,MSELoss,cpu
+Train,Option 2,0.4120835065841675,0.8978003859519958,18,64,10,3,0.2,64,0.005,100,timestamp,10,30,10,Adam,MSELoss,cpu
+Validation,Option 1,2.555438204785255,-0.4506520270863015,18,64,10,3,0.2,64,0.005,100,timestamp,10,30,10,Adam,MSELoss,cpu
+Validation,Option 2,2.592144250869751,-0.4923597574234009,18,64,10,3,0.2,64,0.005,100,timestamp,10,30,10,Adam,MSELoss,cpu
+Test,Option 1,4.058151570877886,-1.2918129966706058,18,64,10,3,0.2,64,0.005,100,timestamp,10,30,10,Adam,MSELoss,cpu
+Test,Option 2,4.086033344268799,-1.3205130100250244,18,64,10,3,0.2,64,0.005,100,timestamp,10,30,10,Adam,MSELoss,cpu

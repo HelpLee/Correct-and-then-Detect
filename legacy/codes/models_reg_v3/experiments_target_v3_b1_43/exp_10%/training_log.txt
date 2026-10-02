@@ -1,0 +1,17 @@
+Epoch 1/100, Train Loss: 0.1010, Val Loss: 0.1603, Train R2: -1.4458, Val R2: -8.0618
+Epoch 2/100, Train Loss: 0.0537, Val Loss: 0.1740, Train R2: -0.2960, Val R2: -8.8378
+Epoch 3/100, Train Loss: 0.0463, Val Loss: 0.1094, Train R2: -0.1151, Val R2: -5.1840
+Epoch 4/100, Train Loss: 0.0383, Val Loss: 0.0733, Train R2: 0.0708, Val R2: -3.1572
+Epoch 5/100, Train Loss: 0.0182, Val Loss: 0.0221, Train R2: 0.5587, Val R2: -0.2500
+Epoch 6/100, Train Loss: 0.0115, Val Loss: 0.0158, Train R2: 0.7218, Val R2: 0.1078
+Epoch 7/100, Train Loss: 0.0095, Val Loss: 0.0130, Train R2: 0.7702, Val R2: 0.2638
+Epoch 8/100, Train Loss: 0.0081, Val Loss: 0.0147, Train R2: 0.8051, Val R2: 0.1673
+Epoch 9/100, Train Loss: 0.0078, Val Loss: 0.0146, Train R2: 0.8122, Val R2: 0.1724
+Epoch 10/100, Train Loss: 0.0077, Val Loss: 0.0152, Train R2: 0.8123, Val R2: 0.1404
+Epoch 11/100, Train Loss: 0.0070, Val Loss: 0.0190, Train R2: 0.8304, Val R2: -0.0731
+Epoch 12/100, Train Loss: 0.0063, Val Loss: 0.0226, Train R2: 0.8474, Val R2: -0.2765
+Epoch 13/100, Train Loss: 0.0061, Val Loss: 0.0173, Train R2: 0.8533, Val R2: 0.0266
+Epoch 14/100, Train Loss: 0.0056, Val Loss: 0.0206, Train R2: 0.8649, Val R2: -0.1628
+Epoch 15/100, Train Loss: 0.0052, Val Loss: 0.0146, Train R2: 0.8739, Val R2: 0.1731
+Epoch 16/100, Train Loss: 0.0051, Val Loss: 0.0270, Train R2: 0.8778, Val R2: -0.5207
+Early stopping triggered at epoch 17

@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using this research code."
+title: "Correct-and-then-Detect: Adaptive Fault Detection through Data-driven Digital Twins and Transfer Learning"
+type: software
+authors:
+  - family-names: Li
+    given-names: Haibo
+  - family-names: Zeng
+    given-names: Zhiguo
+  - family-names: Yang
+    given-names: Hu
+  - family-names: Li
+    given-names: Xu
+version: 0.1.0
+repository-code: "https://github.com/HelpLee/Correct-and-then-Detect"

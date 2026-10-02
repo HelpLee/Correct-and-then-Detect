@@ -1,0 +1,27 @@
+{
+  "device": "cuda",
+  "gpu": "NVIDIA RTX 1000 Ada Generation Laptop GPU",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "raw_train_rows": 12480,
+  "raw_validation_rows": 1560,
+  "target_train_fraction": 1.0,
+  "fraction_denominator": "D_tgt^train",
+  "train_windows": 12441,
+  "validation_windows": 1521,
+  "batch_size": 64,
+  "max_epochs": 500,
+  "patience": 10,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "frozen_lstm_layer": 0,
+  "scope": "Fine-tuning train and validation loops; excludes preprocessing and checkpoint I/O.",
+  "mean_seconds": 53.69782677999465,
+  "sample_std_seconds": 4.259071321487742,
+  "mean_epochs": 77.2
+}

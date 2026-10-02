@@ -1,0 +1,68 @@
+{
+  "data_file": "data\\source_all_data_b1.csv",
+  "raw_rows": 104000,
+  "split": {
+    "train": "0-70%",
+    "validation": "70-85%",
+    "test": "85-100%"
+  },
+  "window": {
+    "n_past": 30,
+    "n_future": 10
+  },
+  "features": [
+    "motor1_position",
+    "motor2_position",
+    "motor3_position",
+    "motor4_position",
+    "motor5_position",
+    "motor6_position",
+    "motor1_temperature",
+    "motor2_temperature",
+    "motor3_temperature",
+    "motor4_temperature",
+    "motor5_temperature",
+    "motor6_temperature",
+    "motor1_voltage",
+    "motor2_voltage",
+    "motor3_voltage",
+    "motor4_voltage",
+    "motor5_voltage",
+    "motor6_voltage"
+  ],
+  "target": "motor6_temperature",
+  "batch_size": 64,
+  "max_epochs": 100,
+  "patience": 10,
+  "learning_rate": 0.005,
+  "optimizer": "Adam",
+  "loss": "MSELoss",
+  "model_configuration": {
+    "LSTM": {
+      "hidden_size": 64,
+      "layers": 3,
+      "dropout": 0.2
+    },
+    "Transformer": {
+      "d_model": 64,
+      "heads": 4,
+      "feedforward_size": 128,
+      "layers": 3,
+      "dropout": 0.2
+    },
+    "XGBoost": {
+      "n_estimators": 100,
+      "learning_rate": 0.05,
+      "max_depth": 8,
+      "early_stopping_rounds": 10
+    }
+  },
+  "device": "cuda",
+  "gpu": "NVIDIA RTX 1000 Ada Generation Laptop GPU",
+  "python": "3.11.14",
+  "torch": "2.5.1",
+  "xgboost": "3.2.0",
+  "sklearn": "1.7.2",
+  "latency_protocol": "100 warm-up iterations; synchronized timings; batch 1: 500 repeats; batch 64: 200 repeats; model-only and CPU-to-device-plus-model scopes.",
+  "xgboost_latency_note": "The reported end-to-end path accepts CPU NumPy input and includes XGBoost's DMatrix/device-mismatch fallback to the CUDA booster."
+}

@@ -1,0 +1,21 @@
+{
+  "purpose": "Figure 13 aligned with the original Figure 12 transfer experiment",
+  "same_target_test_before_after": true,
+  "n_target_test_windows": 1521,
+  "source_checkpoint": "codes\\models_reg_v3\\source_best_model_v3_b1.pth",
+  "source_checkpoint_sha256": "d0f830a1ebfff81a53e2d76ef4b40c9fcef9a33121ff9bb36df5205ea77dcc7d",
+  "after_tl_checkpoint": "codes\\models_reg_v3\\experiments_transfer_v3_b1_42\\exp_0_80%\\transfer_best_model.pth",
+  "after_tl_checkpoint_sha256": "6dbac675aaece60e597fd4edc964cd5d62d8214e0530c9cb5cbfc97107878bb9",
+  "protocol": {
+    "seed": 42,
+    "frozen_lstm_layer": 0,
+    "target_train_usage": "100% of the designated healthy target-domain training split",
+    "n_past": 30,
+    "n_future": 10
+  },
+  "prediction_files": {
+    "source": "codes\\models_reg_v3\\experiments_source_v3\\exp_20250411_141442_b1\\predictions_results_n_past_30_n_future_10_20250411_141442.csv",
+    "target_before_tl": "codes\\models_reg_v3\\experiments_direct_generalization_v3_b1\\exp_source_direct_test\\predictions_results.csv",
+    "target_after_tl": "codes\\models_reg_v3\\experiments_transfer_v3_b1_42\\exp_0_80%\\predictions_results.csv"
+  }
+}

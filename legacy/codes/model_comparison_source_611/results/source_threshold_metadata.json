@@ -1,0 +1,14 @@
+{
+  "device": "cuda",
+  "checkpoint": "codes\\models_reg_v3\\source_best_model_v3_b1.pth",
+  "validation_file": "codes\\data\\source_val_faults20_T_Th1_FL30-50_TI4-8_b1.csv",
+  "test_file": "codes\\data\\source_test_faults20_T_Th1_FL30-50_TI4-8_b1.csv",
+  "n_past": 30,
+  "n_future": 10,
+  "selected_threshold": 2.2,
+  "selected_validation_f1": 0.8870967741935484,
+  "best_threshold": 1.8,
+  "best_validation_f1": 0.8949357520786092,
+  "prof": true,
+  "parallel_threshold_streams": 61
+}

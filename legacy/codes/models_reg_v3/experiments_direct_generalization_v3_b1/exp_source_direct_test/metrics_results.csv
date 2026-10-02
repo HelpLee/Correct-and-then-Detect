@@ -1,0 +1,3 @@
+Dataset,Option,MSE,RMSE,R2,MAPE(%),n_past,n_future,test_split,checkpoint,device,batch_size
+Test,Option 1 (flatten all steps),1.947852611541748,1.3956549041728574,-0.1000363826751709,2.7246851921081543,30,10,last 10%,source_best_model_v3_b1.pth,cuda,256
+Test,Option 2 (last step only),2.8525049686431885,1.6889360463449137,-0.6199759244918823,3.362281560897827,30,10,last 10%,source_best_model_v3_b1.pth,cuda,256

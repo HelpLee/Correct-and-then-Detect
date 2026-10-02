@@ -1,0 +1,70 @@
+{
+  "archived_source": {
+    "past": 30,
+    "future": 10,
+    "hidden": 64,
+    "layers": 3,
+    "batch": 64,
+    "learning_rate": 0.005,
+    "epochs": 100,
+    "dropout": 0.2
+  },
+  "target_scratch": {
+    "learning_rate": 0.005,
+    "epochs": 100,
+    "weight_decay": 0
+  },
+  "transfer": {
+    "learning_rate": 0.0001,
+    "epochs": 500,
+    "weight_decay": 0.0001,
+    "freeze": [
+      "0",
+      "01",
+      "012",
+      "no"
+    ]
+  },
+  "historical_window_sweep": {
+    "hidden": 256,
+    "batch": 128,
+    "learning_rate": 0.0001,
+    "epochs": 100,
+    "history_lengths": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "forecast_horizons": [
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "figure_input": "recorded_experiment_summary"
+  },
+  "detection": {
+    "threshold": 1.8,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "legacy_ratios": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80
+    ],
+    "raw_observation_immutable": true
+  }
+}
