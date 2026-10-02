@@ -8,7 +8,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-EE4C2C?logo=pytorch&logoColor=white)
 
-[Paper](paper/Fault-detection_TL_reorganized.pdf) · [Method](#method) · [Reproduce](#reproduce) · [Paper ↔ Code ↔ Results](docs/PAPER_CODE_RESULTS.md) · [Audit](docs/VALIDATION.md)
+[Paper](paper/Fault-detection_TL_reorganized.pdf) · [Method](#method) · [Reproduce](#reproduce) · [Paper ↔ Code ↔ Results](docs/PAPER_CODE_RESULTS.md) · [Audit](docs/VALIDATION.md) · [Contributors](#contributors)
 
 ![Framework overview](assets/framework.png)
 
@@ -65,6 +65,13 @@ docs/                 provenance, mapping and audit evidence
 ```
 
 The supported public evaluation entry is `reproduce.py`. Legacy modules preserve experiment provenance.
+
+## Contributors
+
+| Contributor | GitHub |
+| --- | --- |
+| Haibo Li | [@HelpLee](https://github.com/HelpLee) |
+| sonic160 | [@sonic160](https://github.com/sonic160) |
 
 ## Citation and availability
 
