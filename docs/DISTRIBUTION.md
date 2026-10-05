@@ -7,3 +7,5 @@ The assembled local repository retains everything. `.gitignore` excludes full ar
 No license was found or assigned. Code/data/image reuse rights require the authors' licensing decision; copyright and publication metadata are not inferred.
 
 README layout follows the paper-first organization of [Segment Anything](https://github.com/facebookresearch/segment-anything) and [DINOv2](https://github.com/facebookresearch/dinov2): overview, result preview, concise usage, provenance and citation. Text and assets are specific to this project.
+
+The updated three-seed window-sensitivity data, 75 checkpoints, prediction vectors, scalers and scripts are committed directly under `experiments/window_sensitivity/`. Older window data inside the immutable v0.1.0 artifact ZIP are superseded and ignored by the current evaluation/plotting entries. Publication plotting scripts and their extracted data are included in `scripts/plotting/` and `results/reference/figure_data/`.

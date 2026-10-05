@@ -1,0 +1,6 @@
+Figure 12: target-domain nominal-model test performance by transfer-learning layer-freezing strategy.
+The CSV contains mean and sample SD for five-seed groups, plus the direct-source baseline.
+Plot x positions map source summary ratios 10,20,...,80% to the displayed target-training ratios 12.5,25,...,100%.
+Test MAPE values are multiplied by 100 and reported in percent to match the figure axis.
+The direct-source baseline is a single fixed model evaluation, repeated at each x position for drawing a horizontal line; its SD is set to 0 and n_seeds=1.
+Metric sources: research/codes/models_reg_v3/metrics_summary_transfer.csv, metrics_summary_target.csv; direct baseline from research/codes/model_comparison_source_611/results/residual_alignment_before_after_metrics.csv.

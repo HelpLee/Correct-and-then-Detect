@@ -1,0 +1,4 @@
+﻿model,test_RMSE,test_R2,test_MAPE_percent
+LSTM,0.4411,0.8591,0.755
+XGBoost,0.4239,0.8699,0.7235
+Transformer,0.443,0.8579,0.7651

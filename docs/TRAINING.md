@@ -10,3 +10,7 @@ Source and scratch-target defaults: learning rate 0.005, maximum 100 epochs. Tra
 Best-state snapshots now use deep copies, fixing the historical shallow snapshot bug. Runs save weights, their own scalers, history and metadata under `results/generated/training/`. They do not replace released weights. The fix and unresolved source-scaler lineage mean exact historical retraining is not promised.
 
 The public audit evaluates released weights; new training outputs are not automatically substituted into that released-weight path. Retraining comparison is a separate validation scope.
+
+## Window sensitivity
+
+Run `python experiments/window_sensitivity/run_experiment.py --seed 42` (then 43 and 44). Fresh outputs go to `results/generated/window_sensitivity/`; existing completed combinations are reused. Generate summaries with `python experiments/window_sensitivity/make_report.py --input-dir results/generated/window_sensitivity`. This uses 64 hidden units, train-only scalers, discontinuity-safe windows and shared validation decision rows. Final test data are reserved.

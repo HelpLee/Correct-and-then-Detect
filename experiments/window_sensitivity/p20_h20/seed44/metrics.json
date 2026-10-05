@@ -1,0 +1,14 @@
+{
+  "n_past": 20,
+  "n_future": 20,
+  "seed": 44,
+  "validation_mse": 0.33476039740911284,
+  "validation_r2": 0.7777501080529372,
+  "validation_rmse": 0.5785848230027407,
+  "validation_mape_percent": 1.056469824919304,
+  "train_windows": 67339,
+  "validation_windows": 12930,
+  "best_epoch": 15,
+  "epochs_run": 25,
+  "seconds": 398.5210102000274
+}

@@ -58,14 +58,8 @@ def figures():
     fig,axes=plt.subplots(1,3,figsize=(10,3.5))
     for ax,col,label in zip(axes,['rmse_last','r2_last','mape_last_percent'],['RMSE (C)','R squared','MAPE (%)']): ax.bar(m.model,m[col],color=['#294C73','#287271','#A65E2E']);ax.set_ylabel(label)
     save(fig,'fig09_source_accuracy')
-    sw=pd.read_csv(PKG/'exps/past_future_metrics_summary.csv')
-    fig,axes=plt.subplots(1,2,figsize=(10,3.5))
-    for ax,col in zip(axes,['r2','mse']):
-        for future in sorted(sw.n_future.unique()):
-            d=sw[sw.n_future==future].sort_values('n_past')
-            ax.plot(d.n_past,d[col],marker='o',label=f'Forecast horizon {future}')
-        ax.set_xlabel('History length');ax.set_ylabel(col.upper())
-    axes[1].legend(fontsize=7);save(fig,'fig10_window_sensitivity')
+    from plotting.fig10_window_sensitivity import render as render_window_sensitivity
+    render_window_sensitivity(ROOT/'experiments/window_sensitivity/validation_summary.csv', FIG)
     p=pd.read_csv(OUT/'residual_predictions.csv');src=p[p.condition=='Source reference']
     source=pd.read_csv(OUT/'source_nominal_predictions.csv');sm=pd.read_csv(OUT/'source_nominal_metrics.csv')
     fig,axes=plt.subplots(1,2,figsize=(10,4))

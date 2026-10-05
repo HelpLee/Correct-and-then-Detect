@@ -1,0 +1,17 @@
+﻿configuration,metric,mean,sample_sd,n_seeds
+No TL + No PROF,Accuracy,0.9469,0.0057,5
+No TL + No PROF,Precision,0.7640,0.0341,5
+No TL + No PROF,Recall,0.7354,0.0196,5
+No TL + No PROF,F1-score,0.7493,0.0245,5
+No TL + PROF,Accuracy,0.9638,0.0339,5
+No TL + PROF,Precision,0.8531,0.1882,5
+No TL + PROF,Recall,0.8817,0.0377,5
+No TL + PROF,F1-score,0.8546,0.1028,5
+TL + No PROF,Accuracy,0.9532,0.0009,5
+TL + No PROF,Precision,0.8240,0.0052,5
+TL + No PROF,Recall,0.7195,0.0043,5
+TL + No PROF,F1-score,0.7682,0.0042,5
+TL + PROF,Accuracy,0.9826,0.0010,5
+TL + PROF,Precision,0.9752,0.0101,5
+TL + PROF,Recall,0.8610,0.0027,5
+TL + PROF,F1-score,0.9145,0.0045,5

@@ -1,0 +1,4 @@
+﻿model,device,batch_size,scope,latency_median_ms
+LSTM,cuda,1,end_to_end,0.3568
+XGBoost,cuda,1,end_to_end,4.178850000000001
+Transformer,cuda,1,end_to_end,1.5203000000000002

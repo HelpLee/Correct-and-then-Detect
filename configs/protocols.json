@@ -25,27 +25,6 @@
       "no"
     ]
   },
-  "historical_window_sweep": {
-    "hidden": 256,
-    "batch": 128,
-    "learning_rate": 0.0001,
-    "epochs": 100,
-    "history_lengths": [
-      20,
-      30,
-      40,
-      50,
-      60
-    ],
-    "forecast_horizons": [
-      10,
-      15,
-      20,
-      25,
-      30
-    ],
-    "figure_input": "recorded_experiment_summary"
-  },
   "detection": {
     "threshold": 1.8,
     "seeds": [
@@ -66,5 +45,41 @@
       80
     ],
     "raw_observation_immutable": true
+  },
+  "window_sensitivity": {
+    "hidden": 64,
+    "layers": 3,
+    "dropout": 0.2,
+    "input": 18,
+    "direct_multi_output": true,
+    "batch_size": 64,
+    "optimizer": "Adam",
+    "learning_rate": 0.005,
+    "maximum_epochs": 100,
+    "patience": 10,
+    "loss": "all-output scaled MSE",
+    "early_stopping": "last-output MSE on common validation decisions",
+    "history_lengths": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "forecast_horizons": [
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "validation_decisions": 12930,
+    "test_evaluation": false,
+    "figure_input": "experiments/window_sensitivity/validation_summary.csv"
   }
 }

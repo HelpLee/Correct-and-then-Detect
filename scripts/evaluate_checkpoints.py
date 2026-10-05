@@ -123,8 +123,8 @@ def nominal():
     summaries=pd.DataFrame(summary_rows);summaries.to_csv(OUT/'nominal_summary_comparison.csv',index=False)
     delta=float(summaries.delta.abs().max());CHECKS.append(dict(name='nominal_mean_std_all_metrics',rows=len(summaries),maximum_absolute_delta=delta,tolerance=3e-4,status='PASS' if delta<3e-4 else 'MISMATCH'))
     print(CHECKS[-1],flush=True)
-    # Window-sensitivity study: retain the author's recorded experimental sweep.
-    pd.read_csv(PKG/'exps/past_future_metrics_summary.csv').to_csv(OUT/'window_sweep.csv',index=False)
+    # Figure 10 uses the new three-seed fresh validation experiment.
+    pd.read_csv(ROOT/'experiments/window_sensitivity/validation_summary.csv').to_csv(OUT/'window_sweep.csv',index=False)
     # Controlled benchmark weights are kept distinct from the archived source model.
     bench=module(PKG/'codes/model_comparison_source_611/run_source_model_comparison.py')
     tensors,bfs,bts,_=bench.load_data(); brefs=pd.read_csv(refdir/'source_model_metrics.csv'); brows=[]; latency=[]

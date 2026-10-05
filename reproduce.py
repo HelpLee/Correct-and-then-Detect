@@ -30,9 +30,12 @@ def compare():
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command',choices=['verify','smoke','nominal','detection','evaluate','figures','compare','full'])
+    parser.add_argument('command',choices=['verify','smoke','nominal','detection','evaluate','figures','compare','full','windows'])
     args=parser.parse_args()
     if args.command=='verify': verify()
+    elif args.command=='windows':
+        run('experiments/window_sensitivity/verify_results.py')
+        run('scripts/plotting/fig10_window_sensitivity.py')
     elif args.command=='smoke': run('scripts/smoke_checkpoints.py')
     else:
         if args.command in {'nominal','evaluate','full'}: run('scripts/evaluate_checkpoints.py','nominal')

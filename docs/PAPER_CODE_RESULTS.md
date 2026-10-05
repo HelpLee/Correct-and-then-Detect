@@ -14,7 +14,7 @@
 | Figures 1–7 | Fixed illustrations and platform assets |
 | Figure 8 | Cleaned domain distributions |
 | Figure 9 | Recomputed archived/controlled model accuracy |
-| Figure 10 | Window-sensitivity study: history 20–60, forecast horizon 10–30; recorded sweep in `legacy/exps/past_future_metrics_summary.csv` and checkpoints in the artifact release |
+| Figure 10 | Updated 25-combination × three-seed validation study in `experiments/window_sensitivity/`; render with `scripts/plotting/fig10_window_sensitivity.py` |
 | Figure 11 | Archived source prediction trace |
 | Figure 12 | 200 scratch/transfer weights × validation/test |
 | Figure 13 | Archived source/direct target/layer-0-frozen target residuals |

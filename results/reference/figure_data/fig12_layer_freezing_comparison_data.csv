@@ -1,0 +1,193 @@
+﻿target_training_ratio_pct_plot_axis,source_summary_ratio_pct,configuration,metric,mean,sample_sd,n_seeds,source_file
+12.5,10,Direct source model,Test R2,-0.6199761071,0,1,residual_alignment_before_after_metrics.csv
+12.5,10,Direct source model,Test MSE,2.852505108,0,1,residual_alignment_before_after_metrics.csv
+12.5,10,Direct source model,Test MAPE (%),3.362281556619419,0,1,residual_alignment_before_after_metrics.csv
+12.5,10,Direct source model,Test RMSE,1.688936088,0,1,residual_alignment_before_after_metrics.csv
+12.5,10,Freeze layer 0,Test R2,0.1846896552,0.01667006376,5,metrics_summary_transfer.csv
+12.5,10,Freeze layer 0,Test MSE,1.435624213,0.02935317492,5,metrics_summary_transfer.csv
+12.5,10,Freeze layer 0,Test MAPE (%),2.212794003,0.02299543969,5,metrics_summary_transfer.csv
+12.5,10,Freeze layer 0,Test RMSE,1.198112003,0.01232237323,5,metrics_summary_transfer.csv
+12.5,10,Freeze layers 0-1,Test R2,0.3032602202,0.007558465167,5,metrics_summary_transfer.csv
+12.5,10,Freeze layers 0-1,Test MSE,1.226841416,0.01330918426,5,metrics_summary_transfer.csv
+12.5,10,Freeze layers 0-1,Test MAPE (%),2.042909455,0.01106695661,5,metrics_summary_transfer.csv
+12.5,10,Freeze layers 0-1,Test RMSE,1.107612433,0.00600952099,5,metrics_summary_transfer.csv
+12.5,10,Freeze layers 0-2,Test R2,0.1123240506,0.001871464779,5,metrics_summary_transfer.csv
+12.5,10,Freeze layers 0-2,Test MSE,1.563047856,0.003295334307,5,metrics_summary_transfer.csv
+12.5,10,Freeze layers 0-2,Test MAPE (%),2.343126742,0.002804082137,5,metrics_summary_transfer.csv
+12.5,10,Freeze layers 0-2,Test RMSE,1.250218428,0.001317931703,5,metrics_summary_transfer.csv
+12.5,10,Fine-tune all,Test R2,0.05292411412,0.009619870091,5,metrics_summary_transfer.csv
+12.5,10,Fine-tune all,Test MSE,1.66764114,0.01693897117,5,metrics_summary_transfer.csv
+12.5,10,Fine-tune all,Test MAPE (%),2.441526435,0.0131019357,5,metrics_summary_transfer.csv
+12.5,10,Fine-tune all,Test RMSE,1.29135522,0.006544972427,5,metrics_summary_transfer.csv
+12.5,10,Target-only,Test R2,-0.4829390323,0.4348403536,5,metrics_summary_target.csv
+12.5,10,Target-only,Test MSE,2.611205898,0.7656806323,5,metrics_summary_target.csv
+12.5,10,Target-only,Test MAPE (%),3.041265228,0.3912925379,5,metrics_summary_target.csv
+12.5,10,Target-only,Test RMSE,1.600687328,0.2213729318,5,metrics_summary_target.csv
+25.0,20,Direct source model,Test R2,-0.6199761071,0,1,residual_alignment_before_after_metrics.csv
+25.0,20,Direct source model,Test MSE,2.852505108,0,1,residual_alignment_before_after_metrics.csv
+25.0,20,Direct source model,Test MAPE (%),3.362281556619419,0,1,residual_alignment_before_after_metrics.csv
+25.0,20,Direct source model,Test RMSE,1.688936088,0,1,residual_alignment_before_after_metrics.csv
+25.0,20,Freeze layer 0,Test R2,0.6598300613,0.01934807304,5,metrics_summary_transfer.csv
+25.0,20,Freeze layer 0,Test MSE,0.5989819749,0.03406869826,5,metrics_summary_transfer.csv
+25.0,20,Freeze layer 0,Test MAPE (%),1.426960822,0.03478547221,5,metrics_summary_transfer.csv
+25.0,20,Freeze layer 0,Test RMSE,0.7736276763,0.02195890053,5,metrics_summary_transfer.csv
+25.0,20,Freeze layers 0-1,Test R2,0.576998054,0.03567252677,5,metrics_summary_transfer.csv
+25.0,20,Freeze layers 0-1,Test MSE,0.7448351902,0.06281331211,5,metrics_summary_transfer.csv
+25.0,20,Freeze layers 0-1,Test MAPE (%),1.597407022,0.05349645845,5,metrics_summary_transfer.csv
+25.0,20,Freeze layers 0-1,Test RMSE,0.8622666621,0.03648826691,5,metrics_summary_transfer.csv
+25.0,20,Freeze layers 0-2,Test R2,0.228002484,0.007364486052,5,metrics_summary_transfer.csv
+25.0,20,Freeze layers 0-2,Test MSE,1.359357615,0.0129676197,5,metrics_summary_transfer.csv
+25.0,20,Freeze layers 0-2,Test MAPE (%),2.154382764,0.01265500582,5,metrics_summary_transfer.csv
+25.0,20,Freeze layers 0-2,Test RMSE,1.165901636,0.005566951202,5,metrics_summary_transfer.csv
+25.0,20,Fine-tune all,Test R2,0.6475848538,0.003621370247,5,metrics_summary_transfer.csv
+25.0,20,Fine-tune all,Test MSE,0.620543723,0.006376623139,5,metrics_summary_transfer.csv
+25.0,20,Fine-tune all,Test MAPE (%),1.482497966,0.007230490927,5,metrics_summary_transfer.csv
+25.0,20,Fine-tune all,Test RMSE,0.7877355736,0.004048340788,5,metrics_summary_transfer.csv
+25.0,20,Target-only,Test R2,0.2066113239,0.2200745061,5,metrics_summary_target.csv
+25.0,20,Target-only,Test MSE,1.397023846,0.387514143,5,metrics_summary_target.csv
+25.0,20,Target-only,Test MAPE (%),2.271695933,0.2971719955,5,metrics_summary_target.csv
+25.0,20,Target-only,Test RMSE,1.172179532,0.1517201031,5,metrics_summary_target.csv
+37.5,30,Direct source model,Test R2,-0.6199761071,0,1,residual_alignment_before_after_metrics.csv
+37.5,30,Direct source model,Test MSE,2.852505108,0,1,residual_alignment_before_after_metrics.csv
+37.5,30,Direct source model,Test MAPE (%),3.362281556619419,0,1,residual_alignment_before_after_metrics.csv
+37.5,30,Direct source model,Test RMSE,1.688936088,0,1,residual_alignment_before_after_metrics.csv
+37.5,30,Freeze layer 0,Test R2,0.8162066412,0.004574752889,5,metrics_summary_transfer.csv
+37.5,30,Freeze layer 0,Test MSE,0.3236291527,0.008055369414,5,metrics_summary_transfer.csv
+37.5,30,Freeze layer 0,Test MAPE (%),1.035568232,0.01880809658,5,metrics_summary_transfer.csv
+37.5,30,Freeze layer 0,Test RMSE,0.5688399802,0.007087287819,5,metrics_summary_transfer.csv
+37.5,30,Freeze layers 0-1,Test R2,0.7000786543,0.01202649744,5,metrics_summary_transfer.csv
+37.5,30,Freeze layers 0-1,Test MSE,0.5281109807,0.02117663664,5,metrics_summary_transfer.csv
+37.5,30,Freeze layers 0-1,Test MAPE (%),1.352270535,0.02171160306,5,metrics_summary_transfer.csv
+37.5,30,Freeze layers 0-1,Test RMSE,0.7265641823,0.01467888634,5,metrics_summary_transfer.csv
+37.5,30,Freeze layers 0-2,Test R2,0.3800498028,0.001541593098,5,metrics_summary_transfer.csv
+37.5,30,Freeze layers 0-2,Test MSE,1.091627893,0.00271448583,5,metrics_summary_transfer.csv
+37.5,30,Freeze layers 0-2,Test MAPE (%),1.907487436,0.003579880323,5,metrics_summary_transfer.csv
+37.5,30,Freeze layers 0-2,Test RMSE,1.044809173,0.001298260844,5,metrics_summary_transfer.csv
+37.5,30,Fine-tune all,Test R2,0.7679737404,0.002685501531,5,metrics_summary_transfer.csv
+37.5,30,Fine-tune all,Test MSE,0.4085591681,0.004728715938,5,metrics_summary_transfer.csv
+37.5,30,Fine-tune all,Test MAPE (%),1.162384483,0.006540498379,5,metrics_summary_transfer.csv
+37.5,30,Fine-tune all,Test RMSE,0.6391755568,0.003711563504,5,metrics_summary_transfer.csv
+37.5,30,Target-only,Test R2,0.4379462333,0.2539299629,5,metrics_summary_target.csv
+37.5,30,Target-only,Test MSE,0.989682029,0.447127901,5,metrics_summary_target.csv
+37.5,30,Target-only,Test MAPE (%),1.741790352,0.3936659439,5,metrics_summary_target.csv
+37.5,30,Target-only,Test RMSE,0.9685082823,0.2273185785,5,metrics_summary_target.csv
+50.0,40,Direct source model,Test R2,-0.6199761071,0,1,residual_alignment_before_after_metrics.csv
+50.0,40,Direct source model,Test MSE,2.852505108,0,1,residual_alignment_before_after_metrics.csv
+50.0,40,Direct source model,Test MAPE (%),3.362281556619419,0,1,residual_alignment_before_after_metrics.csv
+50.0,40,Direct source model,Test RMSE,1.688936088,0,1,residual_alignment_before_after_metrics.csv
+50.0,40,Freeze layer 0,Test R2,0.8228261932,0.004779258771,5,metrics_summary_transfer.csv
+50.0,40,Freeze layer 0,Test MSE,0.3119732364,0.008415469832,5,metrics_summary_transfer.csv
+50.0,40,Freeze layer 0,Test MAPE (%),1.007191505,0.02220290524,5,metrics_summary_transfer.csv
+50.0,40,Freeze layer 0,Test RMSE,0.558494541,0.007555396831,5,metrics_summary_transfer.csv
+50.0,40,Freeze layers 0-1,Test R2,0.7305750877,0.01089024354,5,metrics_summary_transfer.csv
+50.0,40,Freeze layers 0-1,Test MSE,0.4744118975,0.01917588488,5,metrics_summary_transfer.csv
+50.0,40,Freeze layers 0-1,Test MAPE (%),1.274171197,0.02120845763,5,metrics_summary_transfer.csv
+50.0,40,Freeze layers 0-1,Test RMSE,0.6886339317,0.01397160003,5,metrics_summary_transfer.csv
+50.0,40,Freeze layers 0-2,Test R2,0.41372607,0.003726685665,5,metrics_summary_transfer.csv
+50.0,40,Freeze layers 0-2,Test MSE,1.032329658,0.006562065854,5,metrics_summary_transfer.csv
+50.0,40,Freeze layers 0-2,Test MAPE (%),1.850690354,0.006993579673,5,metrics_summary_transfer.csv
+50.0,40,Freeze layers 0-2,Test RMSE,1.016031125,0.003226633895,5,metrics_summary_transfer.csv
+50.0,40,Fine-tune all,Test R2,0.791481515,0.005452304443,5,metrics_summary_transfer.csv
+50.0,40,Fine-tune all,Test MSE,0.367165936,0.009600589915,5,metrics_summary_transfer.csv
+50.0,40,Fine-tune all,Test MAPE (%),1.090860379,0.01938212086,5,metrics_summary_transfer.csv
+50.0,40,Fine-tune all,Test RMSE,0.6058902524,0.007933348891,5,metrics_summary_transfer.csv
+50.0,40,Target-only,Test R2,0.6852834445,0.07148811791,5,metrics_summary_target.csv
+50.0,40,Target-only,Test MSE,0.5541628535,0.1258785365,5,metrics_summary_target.csv
+50.0,40,Target-only,Test MAPE (%),1.312980601,0.1358917549,5,metrics_summary_target.csv
+50.0,40,Target-only,Test RMSE,0.7397139481,0.08358306337,5,metrics_summary_target.csv
+62.5,50,Direct source model,Test R2,-0.6199761071,0,1,residual_alignment_before_after_metrics.csv
+62.5,50,Direct source model,Test MSE,2.852505108,0,1,residual_alignment_before_after_metrics.csv
+62.5,50,Direct source model,Test MAPE (%),3.362281556619419,0,1,residual_alignment_before_after_metrics.csv
+62.5,50,Direct source model,Test RMSE,1.688936088,0,1,residual_alignment_before_after_metrics.csv
+62.5,50,Freeze layer 0,Test R2,0.8480972869,0.0008401993307,5,metrics_summary_transfer.csv
+62.5,50,Freeze layer 0,Test MSE,0.2674750962,0.001479449525,5,metrics_summary_transfer.csv
+62.5,50,Freeze layer 0,Test MAPE (%),0.933246256,0.00334090676,5,metrics_summary_transfer.csv
+62.5,50,Freeze layer 0,Test RMSE,0.5171779677,0.001430335188,5,metrics_summary_transfer.csv
+62.5,50,Freeze layers 0-1,Test R2,0.8327316687,0.007764102318,5,metrics_summary_transfer.csv
+62.5,50,Freeze layers 0-1,Test MSE,0.2945313621,0.01367127665,5,metrics_summary_transfer.csv
+62.5,50,Freeze layers 0-1,Test MAPE (%),0.9529046597,0.02728491406,5,metrics_summary_transfer.csv
+62.5,50,Freeze layers 0-1,Test RMSE,0.5425629076,0.01252411529,5,metrics_summary_transfer.csv
+62.5,50,Freeze layers 0-2,Test R2,0.5455125235,0.002934929879,5,metrics_summary_transfer.csv
+62.5,50,Freeze layers 0-2,Test MSE,0.8002759069,0.005167917253,5,metrics_summary_transfer.csv
+62.5,50,Freeze layers 0-2,Test MAPE (%),1.668001355,0.002614944124,5,metrics_summary_transfer.csv
+62.5,50,Freeze layers 0-2,Test RMSE,0.8945767697,0.002882700256,5,metrics_summary_transfer.csv
+62.5,50,Fine-tune all,Test R2,0.8300487995,0.01155367229,5,metrics_summary_transfer.csv
+62.5,50,Fine-tune all,Test MSE,0.299255443,0.02034407117,5,metrics_summary_transfer.csv
+62.5,50,Fine-tune all,Test MAPE (%),0.9770065506,0.02778504904,5,metrics_summary_transfer.csv
+62.5,50,Fine-tune all,Test RMSE,0.5467240693,0.01866105608,5,metrics_summary_transfer.csv
+62.5,50,Target-only,Test R2,0.7371487354,0.1227553108,5,metrics_summary_target.csv
+62.5,50,Target-only,Test MSE,0.4628368108,0.2161514294,5,metrics_summary_target.csv
+62.5,50,Target-only,Test MAPE (%),1.17286686,0.2601213236,5,metrics_summary_target.csv
+62.5,50,Target-only,Test RMSE,0.6647129137,0.1448915221,5,metrics_summary_target.csv
+75.0,60,Direct source model,Test R2,-0.6199761071,0,1,residual_alignment_before_after_metrics.csv
+75.0,60,Direct source model,Test MSE,2.852505108,0,1,residual_alignment_before_after_metrics.csv
+75.0,60,Direct source model,Test MAPE (%),3.362281556619419,0,1,residual_alignment_before_after_metrics.csv
+75.0,60,Direct source model,Test RMSE,1.688936088,0,1,residual_alignment_before_after_metrics.csv
+75.0,60,Freeze layer 0,Test R2,0.8727978232,0.0009182760999,5,metrics_summary_transfer.csv
+75.0,60,Freeze layer 0,Test MSE,0.2239816116,0.001616929567,5,metrics_summary_transfer.csv
+75.0,60,Freeze layer 0,Test MAPE (%),0.8319257527,0.003138084038,5,metrics_summary_transfer.csv
+75.0,60,Freeze layer 0,Test RMSE,0.4732638828,0.001705526404,5,metrics_summary_transfer.csv
+75.0,60,Freeze layers 0-1,Test R2,0.8440981695,0.005849465148,5,metrics_summary_transfer.csv
+75.0,60,Freeze layers 0-1,Test MSE,0.2745168684,0.01029992303,5,metrics_summary_transfer.csv
+75.0,60,Freeze layers 0-1,Test MAPE (%),0.9117873911,0.01827622596,5,metrics_summary_transfer.csv
+75.0,60,Freeze layers 0-1,Test RMSE,0.5238519843,0.009796269107,5,metrics_summary_transfer.csv
+75.0,60,Freeze layers 0-2,Test R2,0.5751524458,0.004274461845,5,metrics_summary_transfer.csv
+75.0,60,Freeze layers 0-2,Test MSE,0.7480849954,0.007526607457,5,metrics_summary_transfer.csv
+75.0,60,Freeze layers 0-2,Test MAPE (%),1.621717007,0.006456322573,5,metrics_summary_transfer.csv
+75.0,60,Freeze layers 0-2,Test RMSE,0.8649081316,0.004349636658,5,metrics_summary_transfer.csv
+75.0,60,Fine-tune all,Test R2,0.849177453,0.005562483485,5,metrics_summary_transfer.csv
+75.0,60,Fine-tune all,Test MSE,0.2655731056,0.009794596652,5,metrics_summary_transfer.csv
+75.0,60,Fine-tune all,Test MAPE (%),0.932284497,0.01341735029,5,metrics_summary_transfer.csv
+75.0,60,Fine-tune all,Test RMSE,0.5152505707,0.009484456802,5,metrics_summary_transfer.csv
+75.0,60,Target-only,Test R2,0.8054739721,0.03521161979,5,metrics_summary_target.csv
+75.0,60,Target-only,Test MSE,0.3425275756,0.06200173255,5,metrics_summary_target.csv
+75.0,60,Target-only,Test MAPE (%),1.042707019,0.1036871457,5,metrics_summary_target.csv
+75.0,60,Target-only,Test RMSE,0.5829193329,0.05227453354,5,metrics_summary_target.csv
+87.5,70,Direct source model,Test R2,-0.6199761071,0,1,residual_alignment_before_after_metrics.csv
+87.5,70,Direct source model,Test MSE,2.852505108,0,1,residual_alignment_before_after_metrics.csv
+87.5,70,Direct source model,Test MAPE (%),3.362281556619419,0,1,residual_alignment_before_after_metrics.csv
+87.5,70,Direct source model,Test RMSE,1.688936088,0,1,residual_alignment_before_after_metrics.csv
+87.5,70,Freeze layer 0,Test R2,0.8702857247,0.003671318872,5,metrics_summary_transfer.csv
+87.5,70,Freeze layer 0,Test MSE,0.228404994,0.006464574256,5,metrics_summary_transfer.csv
+87.5,70,Freeze layer 0,Test MAPE (%),0.8376184323,0.01125470414,5,metrics_summary_transfer.csv
+87.5,70,Freeze layer 0,Test RMSE,0.4778699228,0.006732821691,5,metrics_summary_transfer.csv
+87.5,70,Freeze layers 0-1,Test R2,0.8383605604,0.00693932092,5,metrics_summary_transfer.csv
+87.5,70,Freeze layers 0-1,Test MSE,0.2846198318,0.01221897551,5,metrics_summary_transfer.csv
+87.5,70,Freeze layers 0-1,Test MAPE (%),0.9399301942,0.01787920431,5,metrics_summary_transfer.csv
+87.5,70,Freeze layers 0-1,Test RMSE,0.533374505,0.01146600275,5,metrics_summary_transfer.csv
+87.5,70,Freeze layers 0-2,Test R2,0.5889935215,0.001738460483,5,metrics_summary_transfer.csv
+87.5,70,Freeze layers 0-2,Test MSE,0.7237131921,0.003061136141,5,metrics_summary_transfer.csv
+87.5,70,Freeze layers 0-2,Test MAPE (%),1.602775153,0.003408547601,5,metrics_summary_transfer.csv
+87.5,70,Freeze layers 0-2,Test RMSE,0.8507114399,0.001799458656,5,metrics_summary_transfer.csv
+87.5,70,Fine-tune all,Test R2,0.8596032921,0.02018038657,5,metrics_summary_transfer.csv
+87.5,70,Fine-tune all,Test MSE,0.2472149588,0.03553426223,5,metrics_summary_transfer.csv
+87.5,70,Fine-tune all,Test MAPE (%),0.887089869,0.06300704561,5,metrics_summary_transfer.csv
+87.5,70,Fine-tune all,Test RMSE,0.4959069945,0.03593343253,5,metrics_summary_transfer.csv
+87.5,70,Target-only,Test R2,0.7687028799,0.1447715991,5,metrics_summary_target.csv
+87.5,70,Target-only,Test MSE,0.4072752763,0.2549184054,5,metrics_summary_target.csv
+87.5,70,Target-only,Test MAPE (%),1.118074727,0.3526347546,5,metrics_summary_target.csv
+87.5,70,Target-only,Test RMSE,0.6142956899,0.1729626596,5,metrics_summary_target.csv
+100.0,80,Direct source model,Test R2,-0.6199761071,0,1,residual_alignment_before_after_metrics.csv
+100.0,80,Direct source model,Test MSE,2.852505108,0,1,residual_alignment_before_after_metrics.csv
+100.0,80,Direct source model,Test MAPE (%),3.362281556619419,0,1,residual_alignment_before_after_metrics.csv
+100.0,80,Direct source model,Test RMSE,1.688936088,0,1,residual_alignment_before_after_metrics.csv
+100.0,80,Freeze layer 0,Test R2,0.8739316098,0.00319172882,5,metrics_summary_transfer.csv
+100.0,80,Freeze layer 0,Test MSE,0.2219852042,0.00562009694,5,metrics_summary_transfer.csv
+100.0,80,Freeze layer 0,Test MAPE (%),0.8171981498,0.01046340351,5,metrics_summary_transfer.csv
+100.0,80,Freeze layer 0,Test RMSE,0.4711156426,0.005937630057,5,metrics_summary_transfer.csv
+100.0,80,Freeze layers 0-1,Test R2,0.8431632719,0.005363439775,5,metrics_summary_transfer.csv
+100.0,80,Freeze layers 0-1,Test MSE,0.2761630658,0.0094441142,5,metrics_summary_transfer.csv
+100.0,80,Freeze layers 0-1,Test MAPE (%),0.9192551425,0.01685774285,5,metrics_summary_transfer.csv
+100.0,80,Freeze layers 0-1,Test RMSE,0.5254359758,0.008949924066,5,metrics_summary_transfer.csv
+100.0,80,Freeze layers 0-2,Test R2,0.5882584191,0.002525396245,5,metrics_summary_transfer.csv
+100.0,80,Freeze layers 0-2,Test MSE,0.7250075835,0.004446797492,5,metrics_summary_transfer.csv
+100.0,80,Freeze layers 0-2,Test MAPE (%),1.601756965,0.00449264413,5,metrics_summary_transfer.csv
+100.0,80,Freeze layers 0-2,Test RMSE,0.8514697704,0.002610272269,5,metrics_summary_transfer.csv
+100.0,80,Fine-tune all,Test R2,0.8816524991,0.002249323189,5,metrics_summary_transfer.csv
+100.0,80,Fine-tune all,Test MSE,0.2083900185,0.003960679333,5,metrics_summary_transfer.csv
+100.0,80,Fine-tune all,Test MAPE (%),0.8126521128,0.009826454764,5,metrics_summary_transfer.csv
+100.0,80,Fine-tune all,Test RMSE,0.4564770061,0.004331439023,5,metrics_summary_transfer.csv
+100.0,80,Target-only,Test R2,0.8144231347,0.05197468368,5,metrics_summary_target.csv
+100.0,80,Target-only,Test MSE,0.3267696073,0.09151866503,5,metrics_summary_target.csv
+100.0,80,Target-only,Test MAPE (%),0.9964943336,0.1541004369,5,metrics_summary_target.csv
+100.0,80,Target-only,Test RMSE,0.5660600732,0.07965927981,5,metrics_summary_target.csv
