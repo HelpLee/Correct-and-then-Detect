@@ -1,6 +1,6 @@
 # Scientific provenance and known inconsistencies
 
-Canonical source: latest first revision, formerly `correction_and_then_predict_1stRev/`, manuscript modified in August 2026. Canonical residual threshold: 1.8 °C.
+Current manuscript: `2nd_rev/manuscript_r2/manuscript_r2.tex`, with its second-round response and figures. The earlier manuscript snapshot is retained under `paper/`. Canonical residual threshold: 1.8 °C.
 
 ## Two source-model tracks
 

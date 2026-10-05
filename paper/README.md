@@ -1,4 +1,6 @@
-# Latest manuscript LaTeX project
+The current second-round manuscript, figures and response letter are in [../2nd_rev/](../2nd_rev/). This folder preserves the earlier manuscript and author title page.
+
+# Earlier manuscript snapshot
 
 Main file: `Fault-detection_TL_reorganized.tex`. Author title page: `title_page.tex`.
 
