@@ -1,12 +1,49 @@
-# Correct-and-then-Detect
+<a id="readme-top"></a>
+
+<div align="center">
+
+<h1>Correct-and-then-Detect</h1>
 
 Companion code, data and pretrained models for *Correct-and-then-Detect: Adaptive Fault Detection through Data-driven Digital Twins and Transfer Learning*.
+
+<p>
+  <a href="requirements.txt"><img src="https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python 3.11"></a>
+  <a href="requirements.txt"><img src="https://img.shields.io/badge/PyTorch-2.5.1-EE4C2C?style=flat-square&amp;logo=pytorch&amp;logoColor=white" alt="PyTorch 2.5.1"></a>
+  <a href="https://github.com/HelpLee/Correct-and-then-Detect/releases/tag/v0.1.0"><img src="https://img.shields.io/badge/Release-v0.1.0-0F766E?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Release v0.1.0"></a>
+</p>
+
+<p>
+  <a href="#getting-started"><strong>Getting started</strong></a> &nbsp;&middot;&nbsp;
+  <a href="#reproducing-the-experiments"><strong>Reproduce</strong></a> &nbsp;&middot;&nbsp;
+  <a href="#framework-overview"><strong>Framework</strong></a> &nbsp;&middot;&nbsp;
+  <a href="#selected-results"><strong>Results</strong></a>
+</p>
+
+</div>
 
 The framework learns nominal system behavior from robot observations and uses a digital twin to generate reference predictions for residual-based fault detection. Transfer learning adapts the twin using healthy target-domain data. Prediction-based recursive observation feedback (PROF) replaces detected abnormal observations in the internal feedback buffer with nominal predictions before constructing subsequent context windows.
 
 This repository provides the resources to reproduce nominal modeling, target-domain adaptation, residual analysis and fault-detection experiments, together with the scripts used to generate their figures.
 
-[Data](docs/DATA.md) · [Experiments](docs/EXPERIMENTS.md) · [Training](docs/TRAINING.md) · [Validation](docs/VALIDATION.md)
+<p align="center">
+  <a href="docs/DATA.md">Data</a> &nbsp;&middot;&nbsp;
+  <a href="docs/EXPERIMENTS.md">Experiments</a> &nbsp;&middot;&nbsp;
+  <a href="docs/TRAINING.md">Training</a> &nbsp;&middot;&nbsp;
+  <a href="docs/VALIDATION.md">Validation</a>
+</p>
+
+<details>
+<summary><strong>Contents</strong></summary>
+
+- [Getting started](#getting-started)
+- [Reproducing the experiments](#reproducing-the-experiments)
+- [Training and plotting](#training-and-plotting)
+- [Framework overview](#framework-overview)
+- [Selected results](#selected-results)
+- [Repository structure](#repository-structure)
+- [Contributors and citation](#contributors-and-citation)
+
+</details>
 
 ## Getting started
 
