@@ -68,49 +68,11 @@ Training saves model weights, scalers, histories and metrics under `results/gene
 
 Plotting scripts are available in `scripts/plotting/`, with numerical inputs in `results/reference/figure_data/`. Run a plotting script directly to generate its figure, or use `python reproduce.py figures` for the experiment renderer.
 
-## Framework and experimental setup
-
-### Figure 1. Framework overview
+## Framework overview
 
 ![Data-driven digital twin framework](assets/fig01_framework_overview.png)
 
 The framework combines representative task design and data acquisition, rolling-window nominal prediction, and transfer-learning adaptation using verified healthy data when the system's nominal behavior evolves.
-
-### Figure 2. Residual-based fault detection
-
-![Residual-based fault detection](assets/fig02_residual_fault_detection.png)
-
-The digital twin predicts nominal behavior from a history window. Each prediction is compared with the corresponding raw observation, and a residual above the calibrated threshold triggers an abnormal-state flag.
-
-### Figure 3. Prediction-based recursive observation feedback
-
-![Prediction-based recursive observation feedback](assets/fig03_prediction_feedback.png)
-
-Fault-affected observations can contaminate later input windows and reduce residual sensitivity. PROF replaces detected abnormal observations in the feedback buffer with nominal predictions before the next window is formed.
-
-### Figure 4. Robotic digital twin platform
-
-![Robotic digital twin platform](assets/fig04_platform_structure.png)
-
-The platform connects the physical robot, virtual robot, condition monitoring and digital twin through ROS. Joint measurements provide the inputs for nominal modeling and fault detection.
-
-### Figure 5. Robot and monitored signals
-
-![ArmPi robotic arm and monitored signals](assets/fig05_robot_structure.png)
-
-The six-degree-of-freedom ArmPi robot provides position, temperature and voltage measurements from six servo motors, yielding 18 sensor channels for the predictive model.
-
-### Figure 6. Task design and sampling
-
-![Pick-and-place task design and sampling](assets/fig06_experiment_design.png)
-
-Pick-and-place tasks are generated within the feasible workspace using Halton sampling. Clustering selects representative task pairs for execution and multisensor data collection.
-
-### Figure 7. Synthetic thermal anomaly
-
-![Synthetic motor temperature trajectory](assets/fig07_synthetic_temperature_trajectory.png)
-
-A lumped-parameter thermal network (LPTN) generates a progressive temperature rise and recovery for fault injection. The trajectory illustrates the thermal anomalies used to evaluate residual-based detection.
 
 ## Selected results
 
@@ -137,7 +99,7 @@ results/reference/    numerical references and figure data
 results/generated/    locally generated metrics, models and figures
 data/                 cleaned data and DoE points supplied in the bundle
 artifacts/            checksum manifest for bundled data and models
-assets/               framework, platform and selected result figures
+assets/               framework overview and selected result figures
 legacy/               original modules and resources used by evaluation
 tests/                protocol tests
 docs/                 data, experiment, training and validation guides

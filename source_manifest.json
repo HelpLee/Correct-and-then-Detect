@@ -21,8 +21,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 8863,
-    "sha256": "8c6aca24e94a1ed7ec3483338096defaee800e1b3e6d32bf81a598a558abb431"
+    "bytes": 6854,
+    "sha256": "c152aebcd83825949ef66471aa48132639669555fb4a9d2ef189e49f280e6bdd"
   },
   {
     "path": "artifacts/manifest.json",
@@ -38,36 +38,6 @@
     "path": "assets/fig01_framework_overview.png",
     "bytes": 240922,
     "sha256": "d820a99120ffdf69a1c387387b9a5b0d87ad15a891c6bf84b9b5c9955ee919b2"
-  },
-  {
-    "path": "assets/fig02_residual_fault_detection.png",
-    "bytes": 37761,
-    "sha256": "0efd28cb9814908f2d863ca039e288709dd3c06623a7aa716a0702037dfa4d5f"
-  },
-  {
-    "path": "assets/fig03_prediction_feedback.png",
-    "bytes": 64688,
-    "sha256": "65e39dece7521309146cc1f856272626bd989d3dae5cb6146f3e0fbe42f2c767"
-  },
-  {
-    "path": "assets/fig04_platform_structure.png",
-    "bytes": 267828,
-    "sha256": "29bdd682f70b3e1401f406d46f6d88953f83c10e7435173a610fba8b65dd06da"
-  },
-  {
-    "path": "assets/fig05_robot_structure.png",
-    "bytes": 296806,
-    "sha256": "702667b0d661e1a77549b8995e7be39228605850f9de592aa718fc0e1c53efcb"
-  },
-  {
-    "path": "assets/fig06_experiment_design.png",
-    "bytes": 570327,
-    "sha256": "021509d62bca51001ee4e40e0651e09fcfbdf8cd831773504e653f6b27d80d02"
-  },
-  {
-    "path": "assets/fig07_synthetic_temperature_trajectory.png",
-    "bytes": 64890,
-    "sha256": "0179d23fd80e8dd458b9cc0281366afc2b6a07d954cba266ff7cf0e307cf168f"
   },
   {
     "path": "assets/target_data_budget.png",
