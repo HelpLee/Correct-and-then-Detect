@@ -21,8 +21,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 5433,
-    "sha256": "8c21bcc79c731c664ad3782aa3126f00e36f7b096685a9ee545828c414f81bb9"
+    "bytes": 5397,
+    "sha256": "f336a6ed3a555f330a668090380310936e3f2c1f1a9186e916478ea550814333"
   },
   {
     "path": "artifacts/manifest.json",
@@ -60,19 +60,14 @@
     "sha256": "2ea8a7e864c03605801797243ec8966a25c291dac82a1bf03fc8114611fbcf42"
   },
   {
-    "path": "docs/PROVENANCE.md",
-    "bytes": 2814,
-    "sha256": "b1da4c05c716b052581fb03d3b85ae226fe0a017665090de08b4d66a834019c7"
-  },
-  {
     "path": "docs/TRAINING.md",
     "bytes": 1432,
     "sha256": "d444fee61f0c17d409bf9010bcb06bfd4e460d4840cd22692f779aac84d10efe"
   },
   {
     "path": "docs/VALIDATION.md",
-    "bytes": 3232,
-    "sha256": "ee4a387a40dc54303d706d9fa3fca0b3200d9a908d387193276378203fdf621f"
+    "bytes": 3706,
+    "sha256": "4f6861ea8a59a0c580be300765a06f72727d64cfe820d0703daa1f72742ec1f5"
   },
   {
     "path": "environment.yml",

@@ -4,7 +4,7 @@ Data, models and reproducible experiments for digital-twin-based fault detection
 
 This repository contains experimental resources and reproduction instructions. Manuscripts, revision packages and response letters are maintained separately. A link to the finalized article repository will be added when it is ready.
 
-[Data](docs/DATA.md) · [Experiments](docs/EXPERIMENTS.md) · [Training](docs/TRAINING.md) · [Validation](docs/VALIDATION.md) · [Provenance](docs/PROVENANCE.md)
+[Data](docs/DATA.md) · [Experiments](docs/EXPERIMENTS.md) · [Training](docs/TRAINING.md) · [Validation](docs/VALIDATION.md)
 
 ## Results
 

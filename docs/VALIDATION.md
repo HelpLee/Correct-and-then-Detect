@@ -21,3 +21,7 @@ The archived source scaler is supplied with the weights. Its voltage minimum dif
 Latency is measured afresh and varies with hardware/load. The timing scope is CPU input transfer + forward + synchronization, without CPU output retrieval or the complete detector loop. Training/fine-tuning durations remain recorded measurements. Conceptual drawings/platform images are retained assets; analytical charts use generated metrics, with recorded window results as described above.
 
 Protocol tests cover temporal partition isolation, final-horizon indexing, immutable raw observations, causal PROF feedback, layer freezing and independent state snapshots. CI runs these tests; full evaluation requires the artifact release.
+
+## Checkpoint pairing
+
+Released evaluation uses `legacy/codes/models_reg_v3/source_best_model_v3_b1.pth` with its supplied b1 scalers for source prediction, direct target deployment and target adaptation. Controlled predictor-comparison checkpoints in `legacy/codes/model_comparison_source_611/results/checkpoints/` are a separate model family. Fresh training saves its own weights and scalers; these are not substituted into released-checkpoint evaluations automatically.
