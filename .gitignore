@@ -16,3 +16,7 @@ paper/build/
 *.synctex.gz
 *.fdb_latexmk
 *.fls
+
+# Manuscripts and review packages are maintained separately.
+/paper/
+/2nd_rev/

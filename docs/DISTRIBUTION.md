@@ -1,11 +1,9 @@
 # Distribution
 
-Source ZIP: code, references, manuscript. Artifact ZIP: full input data, weights, scalers, historical window experiments, SHA-256 manifest; extract inside the source repository. Audit evidence ZIP: generated metrics/traces/figures. Generated results are excluded from source/reference checksums.
+The Git repository contains source code, numerical references and the updated three-seed sensitivity experiment, including its 75 checkpoints and prediction arrays. It contains no manuscript, revision package or response letter.
 
-The assembled local repository retains everything. `.gitignore` excludes full artifacts and generated results from source submission. Source is hosted at https://github.com/HelpLee/Correct-and-then-Detect; evaluation inputs are distributed as release assets.
+The data/model artifact ZIP supplies the remaining full input data, nominal/transfer weights and scalers; extract it inside the repository. The required artifact files are checked with `artifacts/manifest.json`. The data bundle has been refreshed to contain only the currently required artifacts. Sensitivity analysis uses `experiments/window_sensitivity/` in the repository; obsolete window weights are excluded from the bundle.
 
-No license was found or assigned. Code/data/image reuse rights require the authors' licensing decision; copyright and publication metadata are not inferred.
+Source/reference integrity is checked with `source_manifest.json`. Generated figures, caches and evaluation output are ignored. Plots are recreated from numerical inputs rather than distributed as manuscript illustrations.
 
-README layout follows the paper-first organization of [Segment Anything](https://github.com/facebookresearch/segment-anything) and [DINOv2](https://github.com/facebookresearch/dinov2): overview, result preview, concise usage, provenance and citation. Text and assets are specific to this project.
-
-The updated three-seed window-sensitivity data, 75 checkpoints, prediction vectors, scalers and scripts are committed directly under `experiments/window_sensitivity/`. Older window data inside the immutable v0.1.0 artifact ZIP are superseded and ignored by the current evaluation/plotting entries. Publication plotting scripts and their extracted data are included in `scripts/plotting/` and `results/reference/figure_data/`.
+Final article links will be added when the manuscript is finalized. No license is assigned in this repository; licensing remains an author decision.

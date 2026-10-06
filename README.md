@@ -1,97 +1,94 @@
-<div align="center">
-
 # Correct-and-then-Detect
-### Adaptive Fault Detection through Data-driven Digital Twins and Transfer Learning
 
-**Haibo Li · Zhiguo Zeng · Hu Yang · Xu Li**
+Data, models and reproducible experiments for digital-twin-based fault detection with transfer learning and prediction-based recursive observation feedback (PROF).
 
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-EE4C2C?logo=pytorch&logoColor=white)
+This repository contains experimental resources and reproduction instructions. Manuscripts, revision packages and response letters are maintained separately. A link to the finalized article repository will be added when it is ready.
 
-[Paper](2nd_rev/manuscript_r2/manuscript_r2.pdf) · [Second-round response](2nd_rev/response_letter_r2/response_letter_r2.pdf) · [Method](#method) · [Reproduce](#reproduce) · [Paper ↔ Code ↔ Results](docs/PAPER_CODE_RESULTS.md) · [Audit](docs/VALIDATION.md) · [Contributors](#contributors)
-
-![Framework overview](assets/framework.png)
-
-</div>
-
-Research implementation integrating design of experiments, a rolling data-driven digital twin, transfer learning and prediction-based recursive observation feedback (PROF). The experiments use an LSTM temperature forecaster on two robotic platforms. The contribution concerns the integrated modeling, adaptation and feedback process.
-
-## Method
-
-1. **Design experiments** to cover the feasible pick-and-place task space.
-2. **Learn a nominal digital twin** from healthy source measurements.
-3. **Adapt the predictor** with healthy target data and layer freezing.
-4. **Detect faults** against the immutable raw observation. PROF replaces flagged observations only in the feedback stream used by subsequent rolling windows.
-
-Evaluation uses 30 historical observations, a 10-step forecast and the final forecast horizon. The source-calibrated threshold is 1.8 °C. Seeds 42–46 quantify target-domain variation.
+[Data](docs/DATA.md) · [Experiments](docs/EXPERIMENTS.md) · [Training](docs/TRAINING.md) · [Validation](docs/VALIDATION.md) · [Provenance](docs/PROVENANCE.md)
 
 ## Results
 
-![Current second-round TL/PROF ablation](assets/ablation.png)
+### Transfer learning and PROF
 
-![Current three-seed validation window sensitivity](assets/window_sensitivity.png)
+![TL/PROF ablation](assets/ablation.png)
 
-Released weights reproduce all 80 target-data detection configurations, all 20 factorial configurations and the 61-threshold source validation curve. The updated window-sensitivity study trains 75 new 64-unit LSTMs: 25 history/horizon combinations × seeds 42, 43, 44, evaluated at the same 12,930 validation decision times. Its results, checkpoints, prediction vectors, training histories and plotting code are included in [experiments/window_sensitivity](experiments/window_sensitivity). The lowest mean validation MSE is achieved by history 60 / horizon 10 (MSE 0.155125, R² 0.897011). See [evaluation protocols](docs/VALIDATION.md).
+Five-seed factorial comparison of transfer learning (TL) and PROF on the target fault test set. The combined configuration achieves mean F1 0.9145 with sample SD 0.0045; the baseline without either component achieves 0.7493 with SD 0.0245. Numerical records are in `results/reference/ablation_by_seed_tau1p8.csv` and `ablation_summary_tau1p8.csv`.
 
-## Reproduce
+### Target-data requirements
 
-Use Python 3.11. Download the [data and pretrained weights](https://github.com/HelpLee/Correct-and-then-Detect/releases/download/v0.1.0/correct-and-then-detect-artifacts.zip), then extract the archive **inside this repository**, preserving its layout. It supplies evaluation data, scalers and nominal/transfer weights. The updated window-sensitivity experiment is now included directly in this repository; the older window experiments in the v0.1.0 archive are superseded. The current source code and second-round manuscript are available in this repository. The [v0.1.0 release](https://github.com/HelpLee/Correct-and-then-Detect/releases/tag/v0.1.0) retains the earlier source/manuscript snapshot.
+![Detection performance versus healthy target training data](assets/target_data_budget.png)
+
+Detection performance at different healthy target training-data budgets, comparing transferred initialization with target-only learning. Curves and shaded bands show five-seed means and sample SDs. Numerical records are in `results/reference/target_detection_by_ratio_tau1p8.csv` and its summary.
+
+The window-sensitivity study remains available as an auxiliary reproducible experiment; it is not a featured result preview.
+
+## Quick start
+
+Use Python 3.11. Install the dependencies:
 
 ```bash
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
+```
+
+### Nominal modeling, transfer learning and fault detection
+
+Download the [data and model artifact bundle](https://github.com/HelpLee/Correct-and-then-Detect/releases/download/v0.1.0/correct-and-then-detect-artifacts.zip) and extract it inside this repository, preserving the directory structure.
+
+```bash
 python reproduce.py verify
 python reproduce.py smoke
 python reproduce.py full
 ```
 
-`full` evaluates the nominal/transfer checkpoints and fault detectors, measures fresh inference latency and generates the result charts. Figure 10 uses the updated three-seed validation averages; the old sensitivity sweep is no longer used. Results are saved under `results/generated/`; reference records and manuscript figures remain unchanged.
+`full` evaluates released nominal/transfer checkpoints, source threshold calibration, target-data scaling and TL/PROF ablation, measures inference latency, and generates experimental charts. Outputs are written under ignored `results/generated/`. Individual stages: `nominal`, `detection`, `figures`, `compare`, `windows`.
 
-Individual stages: `nominal`, `detection`, `figures`, `compare`, `windows`. Run `python reproduce.py windows` to verify and render the updated sensitivity study without the other experiment artifacts. Rendering requires generated CSVs. See [training protocols](docs/TRAINING.md) for separate fresh-training experiments; loading weights does not establish exact retraining reproduction or recreate training durations.
+The default detector uses a 30-step history, a direct 10-step output and the last output for each residual decision. The residual threshold is 1.8 °C, calibrated on source validation data. Raw observations remain immutable; PROF changes only the internal feedback buffer. Target experiments use seeds 42–46; the updated window study uses seeds 42–44.
 
-## Repository
+### Updated window sensitivity
 
-```text
-src/correct_detect/    windows, checkpoint models, layer freezing, PROF
-scripts/              checkpoint evaluation and figure rendering
-configs/              explicit scientific profiles
-results/reference/    immutable detection records
-results/generated/    newly computed metrics, traces and figures (ignored)
-assets/               method overview and result preview
-data/                 DoE and cleaned descriptive data (artifact bundle)
-artifacts/            manifest for nominal/transfer artifacts (release bundle)
-experiments/          updated window study, all 75 weights/traces and reporting code
-legacy/               original experiment modules and numerical references
-2nd_rev/              current second-round manuscript, figures and response letter
-paper/                earlier manuscript snapshot and author title page
-tests/                temporal separation, raw observations and freezing
-docs/                 provenance, mapping and audit evidence
-```
-
-The supported public evaluation entry is `reproduce.py`. Legacy modules preserve experiment provenance.
-
-## Contributors
-
-| Contributor | GitHub |
-| --- | --- |
-| Haibo Li | [@HelpLee](https://github.com/HelpLee) |
-| sonic160 | [@sonic160](https://github.com/sonic160) |
-
-## Citation and availability
-
-Please cite the accompanying manuscript; [CITATION.cff](CITATION.cff) supplies author metadata. Code and experimental artifacts are distributed through [this repository](https://github.com/HelpLee/Correct-and-then-Detect) and its [releases](https://github.com/HelpLee/Correct-and-then-Detect/releases). See [distribution notes](docs/DISTRIBUTION.md) for artifact contents and permissions.
-
-## Updated window sensitivity and publication plots
+The complete 25-combination × three-seed study is included directly in [experiments/window_sensitivity](experiments/window_sensitivity): results, 75 checkpoints, prediction arrays, scalers and training histories.
 
 ```bash
 python reproduce.py windows
-# Optional retraining: writes to results/generated/window_sensitivity
+```
+
+This verifies saved predictions and summaries, then writes plots to `results/generated/figures/`. All configurations use the same 12,930 validation decision times. The lowest mean validation MSE is obtained with history 60 / horizon 10: MSE 0.155125, R² 0.897011. The final test partition is reserved and is not evaluated in this study.
+
+## Fresh training and plotting
+
+```bash
 python experiments/window_sensitivity/run_experiment.py --seed 42
 python experiments/window_sensitivity/run_experiment.py --seed 43
 python experiments/window_sensitivity/run_experiment.py --seed 44
 python experiments/window_sensitivity/make_report.py --input-dir results/generated/window_sensitivity
 ```
 
-The training CSV is supplied by the artifact release at `legacy/codes/data/source_all_data_b1.csv`. It is split chronologically 70%/15%/15%; scalers are fitted only on training rows. Final test rows are reserved and are not evaluated in this sensitivity study. Published means and sample SDs are in `experiments/window_sensitivity/validation_summary.csv`.
+Fresh training writes separately from the published experiment. The source training CSV is supplied by the artifact bundle. See [training protocols](docs/TRAINING.md) for nominal and target-domain training.
 
-Publication plotting scripts for Figures 9, 10, 15 and 16 are in `scripts/plotting/`, with the available extracted figure data in `results/reference/figure_data/`. Run a script directly to save plots under `results/generated/`. The current manuscript and response are under `2nd_rev/`; `paper/` retains the earlier manuscript snapshot. The current Figure 10 experiment and rendering entry are the ones linked above.
+Standalone experimental plotting scripts are in `scripts/plotting/`; their numerical inputs are in `results/reference/figure_data/`. Run a script directly to save its outputs under `results/generated/`. The full experiment renderer is `scripts/render_results.py`.
+
+## Repository layout
+
+```text
+src/correct_detect/    causal windows, checkpoint models, freezing and PROF
+experiments/          updated sensitivity results, weights and reproducible scripts
+scripts/              evaluation, verification and plotting
+configs/              explicit experiment settings
+results/reference/    numerical references and plotting data
+results/generated/    local evaluation outputs (ignored)
+data/                 descriptive cleaned data and DoE points (artifact bundle)
+artifacts/            checksum manifest for released data and weights
+assets/               two current experimental result previews
+legacy/               numerical records and original modules required by reproduction
+tests/                protocol tests
+docs/                 data, experiments, training and validation instructions
+```
+
+## Contributors
+
+Haibo Li · Zhiguo Zeng · Hu Yang · Xu Li
+
+GitHub: [HelpLee](https://github.com/HelpLee), [sonic160](https://github.com/sonic160).
+
+[CITATION.cff](CITATION.cff) describes this software repository. Final article citation and links will be added after publication. See [distribution notes](docs/DISTRIBUTION.md) for resource packaging.

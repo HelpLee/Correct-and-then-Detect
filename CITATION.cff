@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying manuscript when using this research code."
+message: "Please cite this software repository; the finalized article citation will be added after publication."
 title: "Correct-and-then-Detect: Adaptive Fault Detection through Data-driven Digital Twins and Transfer Learning"
 type: software
 authors:

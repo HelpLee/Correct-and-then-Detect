@@ -48,9 +48,6 @@ def statistics():
     ax.set_xlabel('Motor 6 position');ax.set_ylabel('Motor 6 voltage');ax.set_zlabel('Temperature (C)');ax.legend();save(fig,'fig08_domain_joint_distribution')
 
 def figures():
-    # Conceptual drawings, photos and the illustrative thermal curve are fixed assets.
-    assets=['framework_overview','fault_detection','PROF','platform_structure','robot_structure','experiment_design','semi-empirical']
-    for i,name in enumerate(assets,1): shutil.copy2(ROOT/'paper/figs'/f'{name}.png',FIG/f'fig{i:02d}_{name}_illustration.png')
     m=pd.read_csv(OUT/'benchmark_metrics.csv');m=m[m.split=='test'].copy()
     archived=pd.read_csv(OUT/'residual_metrics.csv').iloc[0]
     m.loc[m.model=='LSTM',['rmse_last','r2_last','mape_last_percent']]=[archived.rmse,archived.r2,archived.mape_percent]
@@ -96,4 +93,4 @@ def figures():
         d=lat[lat.batch_size==batch].set_index('model').reindex(['LSTM','Transformer','XGBoost']);ax.bar(np.arange(3)+(i-.5)*.35,d.latency_mean_ms,.35,label=f'Batch {batch}')
     ax.set_xticks(range(3),['LSTM','Transformer','XGBoost']);ax.set_yscale('log');ax.set_ylabel('Fresh input-transfer + forward latency (ms)');ax.legend();save(fig,'fig17_latency_fresh')
 
-if __name__=='__main__': statistics();figures();print('Generated Figures 1-17; illustrations retained, window-sensitivity study rendered from recorded results.')
+if __name__=='__main__': statistics();figures();print('Generated experiment charts from numerical results; no manuscript illustration assets are required.')
