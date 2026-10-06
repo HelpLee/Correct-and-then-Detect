@@ -1,6 +1,6 @@
 # Correct-and-then-Detect
 
-Companion code, data and pretrained models for *Adaptive Fault Detection through Data-driven Digital Twins and Transfer Learning*.
+Companion code, data and pretrained models for *Correct-and-then-Detect: Adaptive Fault Detection through Data-driven Digital Twins and Transfer Learning*.
 
 The framework learns nominal system behavior from robot observations and uses a digital twin to generate reference predictions for residual-based fault detection. Transfer learning adapts the twin using healthy target-domain data. Prediction-based recursive observation feedback (PROF) replaces detected abnormal observations in the internal feedback buffer with nominal predictions before constructing subsequent context windows.
 
